@@ -1,0 +1,30 @@
+.lista-horizontal {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none; /* Para sacar los puntitos */
+  padding: 0;
+}
+
+.lista-horizontal li {
+  background-color: #95a9c0;
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+.light-mode,
+.dark-mode {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.light-mode > *,
+.dark-mode > * {
+  flex-shrink: 0;
+}
+
+main {
+  flex: 1;
+}

@@ -1,20 +1,21 @@
 import React from 'react'
+import reactLogo from '../assets/react.svg' // Asegurate de que esté en /assets
+import '../styles/home.css'
 
-const Main = ({datos}) => {
+const Main = () => {
   return (
-    <div>
-      <br />
-      <div className="card">
-        <img src={datos.imagen} alt="Foto de perfil" />
-        <h2>{datos.nombreApe}</h2>
-        <p>{datos.descripcion}</p>
-      </div>
-      <h4>Lenguajes y habilidades</h4>
-      <div className="lenguajes">
-          {datos.lenguajes.map((lenguaje, index) => (
-            <span key={index} className="lenguaje-contenedor"> {lenguaje} </span>
-          ))}
+    <div className="main-home">
+      <div className="home-content">
+        <div className="home-texto">
+          <h1>¡Hola! 👋</h1>
+          <p>Soy Franco Albornoz, desarrollador web frontend con enfoque en React. Me apasiona construir interfaces intuitivas, modernas y responsivas.</p>
+          <p>Explorá más sobre mí en la sección About Me. 👨‍💻</p>
         </div>
+        <div className="home-logo">
+          <img src={reactLogo} alt="React Logo" className="react-logo" />
+        </div>
+      </div>
+        
     </div>
   )
 }

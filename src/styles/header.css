@@ -1,0 +1,38 @@
+.nav-link {
+  font-weight: bold ;
+  color: rgb(12, 7, 39);
+  text-decoration: none;
+  border: none; 
+  background-color: transparent;
+}
+
+/* Hover y foco */
+.nav-link:hover,
+.nav-link:focus {
+  color: #9193aa;
+  background-color: #12183a; 
+  text-decoration: none !important;
+  border: none;
+}
+
+
+.nav-tabs .nav-link.active {
+  border-color: transparent transparent #dee2e6; 
+}
+/*estilo que saca el espaciado del nav.*/
+
+
+.nav-item:hover {
+  background-color: transparent;
+}
+
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-bar{
+  margin-left: 10px; /* Evita que el título agregue espacio vertical */
+
+}

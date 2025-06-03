@@ -1,0 +1,44 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url("./assets/fondoportfolio.jpeg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+
+  }
+  h1{
+    font-style: oblique;
+  }
+  
+  .card {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto; 
+    padding: 20px;
+    text-align: center; 
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .card img {
+    width: 200px;
+    border-radius: 40%;
+    margin: auto;
+  }
+  
+  a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #094faa;
+  }
+  
+  hr {
+    width: 80%;
+    margin: auto;
+  }
+

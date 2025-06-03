@@ -1,23 +1,20 @@
 import React from 'react'
-import Header from '../components/Header'
-import Main from '../components/Main'
-import Footer from '../components/Footer'
 import useTheme from '../store/useTheme'
-import "../styles/home.css"
+import Header from '../components/Header'
+import MainAboutMe from '../components/MainAboutMe'
+import Footer from '../components/Footer'
+import "../styles/aboutme.css" 
 
-const Home = () => {
-
+const AboutMe = () => {
   const { darkMode } = useTheme()
-    
-
-
+  
   return (
     <div className={darkMode ? 'dark-mode' : 'light-mode'}>
-        <Header/>
-        <Main/>
-        <Footer/>
+      <Header/>
+      <MainAboutMe/>
+      <Footer/>
     </div>
   )
 }
 
-export default Home
+export default AboutMe

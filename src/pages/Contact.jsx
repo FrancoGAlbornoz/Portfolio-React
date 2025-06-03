@@ -1,23 +1,20 @@
 import React from 'react'
 import Header from '../components/Header'
-import Main from '../components/Main'
 import Footer from '../components/Footer'
+import MainContact from '../components/MainContact'
 import useTheme from '../store/useTheme'
-import "../styles/home.css"
+import "../styles/contact.css"
 
-const Home = () => {
-
+const Contact = () => {
   const { darkMode } = useTheme()
-    
-
 
   return (
     <div className={darkMode ? 'dark-mode' : 'light-mode'}>
-        <Header/>
-        <Main/>
-        <Footer/>
+      <Header />
+      <MainContact />
+      <Footer />
     </div>
   )
 }
 
-export default Home
+export default Contact
