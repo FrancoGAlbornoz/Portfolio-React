@@ -23,7 +23,7 @@ const Header = () => {
        <div className="header-top">
         <h1 className="text-white m-0">Portfolio {info?.nombre} {info?.apellido}</h1>
         <div className="header-icons">
-          <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer"><FaGithub size={24} color="white" /></a>
+          <a href="https://github.com/FrancoGAlbornoz" target="_blank" rel="noopener noreferrer"><FaGithub size={24} color="white" /></a>
           <a href="https://www.linkedin.com/in/francogenaroalbornoz" target="_blank" rel="noopener noreferrer"><FaLinkedin size={24} color="white" /></a>
         </div>
       </div>

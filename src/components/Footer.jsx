@@ -7,7 +7,7 @@ const Footer = () => {
     <div>
       <p className='pfooter'>Gracias por visitar mi PortFolio ✨</p>
       <p>
-        <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer"><FaGithub size={24} color="white" /></a>
+        <a href="https://github.com/FrancoGAlbornoz" target="_blank" rel="noopener noreferrer"><FaGithub size={24} color="white" /></a>
         <a href="https://www.linkedin.com/in/francogenaroalbornoz" target="_blank" rel="noopener noreferrer"><FaLinkedin size={24} color="white" /></a>
       </p>
     </div>
