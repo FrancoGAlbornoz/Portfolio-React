@@ -1,12 +1,27 @@
-import React, { useRef } from 'react'
-import { Button } from 'react-bootstrap'
+import React, { useRef, useState } from 'react';
+import { Container, Form, Button, Row, Col } from 'react-bootstrap';
 import emailjs from '@emailjs/browser';
 
 const MainContact = () => {
   const form = useRef()
-  
+  console.log(form);
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
   const sendEmail = (e)=>{
     e.preventDefault()
+
     
     emailjs.sendForm(
       "service_wrtn0sh",
@@ -18,6 +33,7 @@ const MainContact = () => {
       (result) =>{
         console.log(result);
         alert("Mensaje enviado correctamente ✔")
+        setFormData({ name: '', email: '', message: '' });
         form.current.reset();
       })
       .catch(()=>{
@@ -30,15 +46,28 @@ const MainContact = () => {
 
 
   return (
-    <div className="contact-container">
-      <h2>Contacto</h2>
-      <p>Dejame tus datos y te responderé pronto.</p>
-      <form className="contact-form" ref={form} onSubmit={sendEmail}>
-        <input type="text" placeholder="Tu nombre" required  name="name"/>
-        <input type="email" placeholder="Tu email" required  name="email"/>
-        <textarea placeholder="Tu mensaje" required name="message"></textarea>
-        <Button type="submit" variant="success">Enviar</Button>
-      </form>
+    <div>
+      <Container className="mt-4">
+      <h2 className="mb-4">Contacto</h2>
+      <Form ref={form} onSubmit={sendEmail}>
+        <Row className="mb-3">
+          <Col md={6}>
+            <Form.Group controlId="formName">
+              <Form.Control type="text" name="name" value={formData.user_name} onChange={handleChange} placeholder="Tu nombre" required/>
+            </Form.Group>
+          </Col>
+          <Col md={6}>
+            <Form.Group controlId="formEmail">
+              <Form.Control type="email" name="email" value={formData.user_email} onChange={handleChange} placeholder="Tu email" required/>
+            </Form.Group>
+          </Col>
+        </Row>
+        <Form.Group controlId="formMessage" className="mb-3">
+          <Form.Control as="textarea" rows={5} name="message" value={formData.message} onChange={handleChange} placeholder="Tu mensaje" required/>
+        </Form.Group>
+        <Button variant="primary" type="submit">Enviar</Button>
+      </Form>
+    </Container>
     </div>
   )
 }

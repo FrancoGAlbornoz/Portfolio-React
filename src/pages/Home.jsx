@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/Header'
-import Main from '../components/Main'
+import MainHome from '../components/Mainhome'
 import Footer from '../components/Footer'
 import useTheme from '../store/useTheme'
 import "../styles/home.css"
@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div className={darkMode ? 'dark-mode' : 'light-mode'}>
         <Header/>
-        <Main/>
+        <MainHome/>
         <Footer/>
     </div>
   )

@@ -1,22 +1,26 @@
 /*darkmode*/
 .light-mode {
-  background-color: #a0a5d1;
-  color: #000;
+  background-color: #c2eff8;
+  color: #ffffff;
+  background-image: url(../assets/fondoportfolio.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;  
 }
 
 .dark-mode {
   background-color: #121212;
   color: #fff;
+  background-image: url(../assets/fondoportfolio.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .dark-mode .card {
   background-color: #1e1e1e;
   color: #fff;
-}
-
-.dark-mode .lenguaje-contenedor {
-  background-color: #2c2c2c;
-  color: #e0e0e0;
+  border-color: #c2eff8;
 }
 
 .dark-mode a {
@@ -24,29 +28,6 @@
 }
 /*darkmode*/
 
-
-.main-home {
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-}
-
-.home-content {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.home-texto {
-  flex: 1;
-  font-size: 1.2rem;
-}
 /*logo react*/
 .home-logo {
   flex: 1;
@@ -58,6 +39,17 @@
   width: 200px;
   height: 200px;
   animation: spin infinite 20s linear;
+  transition: transform 0.3s ease;
+}
+.react-logo:hover {
+  transform: scale(1.1);
+}
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 @keyframes spin {

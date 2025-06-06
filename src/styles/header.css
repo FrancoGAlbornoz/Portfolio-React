@@ -1,6 +1,6 @@
 .nav-link {
   font-weight: bold ;
-  color: rgb(12, 7, 39);
+  color: #c2eff8;
   text-decoration: none;
   border: none; 
   background-color: transparent;
@@ -19,8 +19,6 @@
 .nav-tabs .nav-link.active {
   border-color: transparent transparent #dee2e6; 
 }
-/*estilo que saca el espaciado del nav.*/
-
 
 .nav-item:hover {
   background-color: transparent;
@@ -33,6 +31,25 @@
 }
 
 .header-bar{
-  margin-left: 10px; /* Evita que el título agregue espacio vertical */
+  margin-left: 10px; 
 
+}
+.header-container {
+  padding: 10px 20px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-icons a {
+  margin-left: 10px;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.header-icons a:hover {
+  transform: scale(1.2);
 }

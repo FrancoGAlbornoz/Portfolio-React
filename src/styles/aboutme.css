@@ -1,18 +1,3 @@
-.lista-horizontal {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-  list-style: none; /* Para sacar los puntitos */
-  padding: 0;
-}
-
-.lista-horizontal li {
-  background-color: #95a9c0;
-  padding: 5px 10px;
-  border-radius: 15px;
-}
-
 .light-mode,
 .dark-mode {
   min-height: 100vh;
@@ -20,11 +5,13 @@
   flex-direction: column;
 }
 
-.light-mode > *,
-.dark-mode > * {
-  flex-shrink: 0;
-}
-
 main {
   flex: 1;
+}
+.badge-hover{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.badge-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
